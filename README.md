@@ -1,9 +1,9 @@
+<!-- markdownlint-disable-file MD013 MD033 -->
 # awesome-bmw-coding
 
 This repository aims to be starting point for anyone interested in coding, ECU programming and general BMW maintenance parkour.
 
-<!-- markdownlint-disable MD033 !-->
-<span style="color:red">**If you see any error, wrong date or anything that needs to be corrected, create an issue or submit a PR**</span>
+>**If you see any error, wrong date or anything that needs to be corrected, create an issue or submit a PR**
 
 ## BMW ECU, TCU and Infotainment List — 1978-2020
 
@@ -12,7 +12,7 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 ### Pre-Motronic Fuel Injection (1973-1988)
 
 | System | Years | BMW Models / Engines |
-|---|---|---|
+| --- | --- | --- |
 | **Bosch K-Jetronic** (mechanical CIS) | 1976-1988 | E21 320i / 323i (M10/M20), E12 528i (M30, early), E24 630CSi (M30), E28 528i (early, M30); some early E30 318i |
 | **Kugelfischer / Bosch + Magneti-Marelli** | 1978-1981 | E26 BMW M1 (M88/1) — mechanical injection, separate electronic ignition |
 | **Bosch L-Jetronic** (analog EFI) | 1979-1988 | E12 528i/530i (US, M30), E23 728i / 732i / 733i (M30), E24 633CSi / 635CSi (early, M30), E28 528i / 533i / 535i (early, M30), E30 318i (early, M10) |
@@ -20,7 +20,7 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 ### Petrol Engine Management ECUs (Motronic / DME)
 
 | ECU | Years | Engines | BMW Chassis / Models |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Bosch Motronic ML1.1** | 1983-1987 | M20 (eta), M30 | E30 325e/325es, E28 528e, E28 533i (late), E24 633CSi (late), E23 733i (late), E32 730i/735i (early) |
 | **Bosch Motronic ML1.2** | 1987-1990 | S38B36, M70 (dual ECU, one per bank) | E34 M5 (1988-1990, S38B36), E32 750i/750iL (early M70 V12), E31 850i (early M70 V12) |
 | **Bosch Motronic ML1.3** | 1987-1993 | M20, M30, S14 (US, catalysed) | E30 325i / 325is / 325iX, E30 M3 (US-spec S14B23), E34 525i / 535i, E32 735i / 735iL, E24 635CSi (late) |
@@ -55,7 +55,7 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 ### Diesel Engine Management ECUs (DDE)
 
 | ECU | Years | Engines | BMW Chassis / Models |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Bosch DDE 2.x / 3.x** | 1991-2001 | M21, M41, M51 (early diesels) | E34 525tds, E36 325td/tds, E38 725tds, E39 525d (early M51) |
 | **Bosch DDE 4.x** | 1998-2005 | M47, M57 (early) | E46 320d / 330d, E39 530d, E38 730d, E53 X5 3.0d |
 | **Bosch DDE 5.x / 6.x (EDC16)** | 2002-2010 | M47TU, M57TU / M57TU2 | E46 LCI 320d, E60 525d / 530d / 535d, E70 X5 3.0d / 3.0sd / 35d, E90 320d / 330d / 335d, E83 X3 2.0d / 3.0d |
@@ -66,7 +66,7 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 ### Transmission Control Units (EGS)
 
 | ECU / Transmission | Years | BMW Chassis / Notes |
-|---|---|---|
+| --- | --- | --- |
 | **ZF 4HP22 (EH)** w/ early EGS | 1983-1992 | E23 745i, E32 730i / 735i / 740i (early), E34 530i / 535i, E28 535i (late), E24 635CSi auto |
 | **ZF 5HP18** | 1991-1999 | E36 325i / 328i (auto), E34 525i / 528i (auto), Z3 2.8 |
 | **ZF 5HP19** | 1996-2005 | E39 520i / 523i / 525i / 528i / 530i, E46 320i / 323i / 325i / 328i / 330i, E83 X3 2.5i / 3.0i (early), E60 525i / 530i (early), E85 Z4 |
@@ -82,7 +82,7 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 ### Infotainment / Head Units
 
 | System | Years | BMW Chassis / Notes |
-|---|---|---|
+| --- | --- | --- |
 | **Bavaria / Bavaria C / Reverse / C23 / C33 / C43 (radio-only)** | 1985-2000 | E30, E32, E34, E36, E38, E39 (base radios — cassette / CD, no nav) |
 | **MK1 / MK2 / MK3 / MK4 (Navigation Computer)** | 1995-2008 | Trunk-mounted DVD-nav unit on E38, E39, E46, E53, E83, E85 (4:3 monochrome → color screens). MK4 with DVD-based Professional Navigation |
 | **M-ASK / M-ASK2 (Audio System Controller)** | 2003-2010 | E60/E61 (pre-LCI), E63/E64, E83, E85/E86 — base radio variant, no full iDrive |
@@ -95,3 +95,62 @@ This repository aims to be starting point for anyone interested in coding, ECU p
 
 ## ECU Coding software
 
+> Rule of thumb on chassis fit:
+> **E-series (pre ~2008)** → Standard Tools (INPA / NCS Expert / WinKFP) + SP-Daten, over **K+DCAN** cable.
+> **F-series, G-series, I-series (~2008+)** → E-Sys + PSdZData, over **ENET** (Ethernet-to-OBD) cable, with **E-Sys Launcher PRO** to sign FDL changes.
+> **All series, dealer-level diag/programming** → ISTA+ (formerly ISTA/D) and ISTA/P, with **ICOM Next** hardware.
+> Mobile apps (Bimmercode, BimmerLink, Carly, ProTool) sit on top of a Bluetooth/WiFi OBD adapter and cover the common 80% of coding without a PC.
+
+### Official BMW Software (Dealer / Factory Tools)
+
+| Tool | Purpose | Chassis Scope | Hardware | Notes |
+| --- | --- | --- | --- | --- |
+| **EDIABAS** | Low-level diagnostic runtime — the engine that drives INPA, NCS Expert, WinKFP, Tool32 etc. Not used directly. | All E / F / G / I | K+DCAN, ENET, ICOM | Required dependency for all "Standard Tools". |
+| **INPA** (Interpreter for Test Procedures) | Live diagnostics, fault-code read/clear, sensor live data, service-function scripts. Read-only coding view. | Primarily E-series (some early F-series) | K+DCAN / ICOM | Engineering tool — German UI in places; very flexible but no guard-rails. |
+| **NCS Expert** | Module coding (FA / VO manipulation, FDL changes, enable hidden features). | E-series (E36 through E9x / E7x) | K+DCAN / ICOM | Needs matching **SP-Daten** package. Dangerous if misused — can brick modules. |
+| **NCS Dummy** | Helper GUI that turns NCS Expert's raw NETTODAT/MAN trace files into human-readable coding options. | E-series | (works offline on dumps) | Community tool — pairs with NCS Expert. |
+| **WinKFP** | ECU flashing / firmware update / ZUSB programming for E-series. | E-series | K+DCAN / ICOM | Used together with NCS Expert when retrofitting a module that needs a firmware update. |
+| **Tool32** | EDIABAS job-runner: run individual SGBD / `.prg` jobs against a control unit (reset adaptations, service functions, etc.). | All E / F (where SGBD applies) | K+DCAN / ICOM | The "Swiss Army knife" of engineering diagnostics. |
+| **DIS / DIS+** (Diagnostic Information System) | Legacy guided diagnostics + programming. Replaced by ISTA. | E36 / E38 / E39 / E46 / E53 / E83 / E85 (and earlier) | OPS / OPPS / DCAN | Largely retired — kept around for very old chassis where ISTA support is thin. |
+| **GT1 / SSS** | Pre-DIS dealer tester. | E30 / E34 / E36 / E38 / E39 / E46 | OPS hardware | Mostly historical; obsolete. |
+| **ISTA/D**, now **ISTA+** (Rheingold) | Modern dealer-level diagnostics — guided test plans, wiring diagrams, fault diagnosis, basic coding. | All E / F / G / I, MINI, Rolls-Royce | ENET / ICOM Next / D-CAN | Replacement for DIS. "ISTA+" is the current branding (since ~2017) that bundles diag + coding. |
+| **ISTA/P** | Dealer-level **programming** (full vehicle reflash, software-integration-level updates, retrofit programming). | E-series up to F/G/I (G-series transitioned to ISTA/P-Next / ISTA-Next inside ISTA+) | ICOM Next | For newer G/I models, programming is folded into ISTA+ via the **ISPI Next** backend; standalone ISTA/P is gradually being retired. |
+| **E-Sys** | The F/G/I-series coding & programming workhorse. Edits CAFD (coded ECU configuration), executes VO coding, TAL-based reprogramming. | F-series, G-series, I-series, F-MINI / F-RR | ENET | The de-facto tool for any non-trivial F/G/I retrofit or feature unlock. |
+| **AOS** (Aftersales Online System) | BMW Group's online portal for dealers — service info, technical bulletins, FSC (Feature Code) ordering. | All | Browser | Source of truth for chassis configuration & FSC enabling codes; not a coding tool itself. |
+
+### Community / Third-Party Software
+
+| Tool | Purpose | Chassis Scope | Platform | Notes |
+| --- | --- | --- | --- | --- |
+| **E-Sys Launcher PRO** (TokenMaster) | Wraps E-Sys to inject the "Pro" token, enabling FDL coding without a real BMW developer cert. Adds "Cheat Codes" library of common changes. | F / G / I | Windows | The current community standard. Superseded **E-Sys Launcher Premium** (deprecated). |
+| **E-Sys Launcher Premium** | Older free wrapper for E-Sys. | F / G (older) | Windows | **Deprecated** — replaced by PRO. |
+| **Bimmercode** | Module coding app (FDL-level for F/G/I, similar but more limited on E). | E (limited), F, G, I | iOS / Android | Pairs with OBD-II BT adapter (e.g. Veepeak, OBDLink MX+). "Expert mode" exposes raw parameters. |
+| **BimmerLink** | Sister app to Bimmercode — focused on diagnostics, live values, service functions (DPF regen, battery reg, etc.). | E (partial), F, G, I | iOS / Android | Does **not** do coding — pair it with Bimmercode for full feature set. |
+| **Carly for BMW** | All-in-one diagnostics + coding + used-car-check + service reset. | E, F, G (limited on newest G/I) | iOS / Android | Subscription model. Curated coding list (less raw access than Bimmercode Expert). |
+| **BimmerGeeks ProTool** | Comprehensive coding + diagnostics app, deepest 3rd-party access (often described as "mobile E-Sys / NCS"). | E, F, G, I, MINI, Rolls-Royce | Android only | Lifetime coding license model. |
+| **OBDeleven** | Module coding (more famous for VAG, also supports BMW). | F, G (limited) | iOS / Android | One-click apps + Pro mode. BMW coverage is narrower than VAG. |
+
+### Tuning Software (engine / transmission flashing — adjacent to "coding")
+
+| Tool | Purpose | Chassis / Engine Scope | Notes |
+| --- | --- | --- | --- |
+| **MHD Flasher** | Engine-DME flashing / map switching for turbo BMWs (N54, N55, S55, S63, S58, B58, etc.). | E / F / G turbo platforms | OBD-II adapter + Android/iOS. Stage maps + back-end flash. |
+| **bootmod3** | Cloud-flashing platform with custom map authoring. | F / G chassis (N55, S55, S63, S58, B48, B58, N63TU, S63TU4) | Browser + OBD adapter. Wider DME coverage than MHD on newer cars. |
+| **xHP Flashtool** | TCU flashing — shift logic / launch control / torque limiter maps. | ZF 6HP and 8HP autos, DCT (Getrag 7DCT) on F-chassis | OBD adapter + Android/iOS. Engine-tune-agnostic; can stack with MHD/bm3. |
+| **JB4** (Burger Motorsports) | Piggyback (not a reflash) — sits between sensors and DME. | Turbo BMWs (N54, N55, S55, S63, S58, B58…) | Not strictly coding, but commonly co-installed. Doesn't modify the DME calibration. |
+
+### Required Data Packages
+
+| Data | Used By | Series | Notes |
+| --- | --- | --- | --- |
+| **SP-Daten** | NCS Expert, WinKFP, INPA, Tool32 | E-series | "Spool-Daten" — coding/programming definitions. Latest commonly distributed version is **v74.x**. |
+| **PSdZData** | E-Sys, ISTA+ programming, ISTA/P | F / G / I | "Programming System Data Zentrale". "Full" = includes SWFL/BTLD firmware blobs; "Lite" = coding (CAFD) only. Versions follow ISTA, e.g. **v4.57.x / v4.58.x** in 2025-2026. |
+
+### Interface Hardware (commonly paired with the above)
+
+| Cable / Tool | Connects | Used For |
+| --- | --- | --- |
+| **K+DCAN cable** (USB) | OBD-II ↔ USB | E-series Standard Tools (INPA, NCS, WinKFP). Cheap, widely cloned. |
+| **ENET cable** (Ethernet) | OBD-II ↔ RJ45/USB | F/G/I-series E-Sys + ISTA. Uses Ethernet over the OBD pins. |
+| **ICOM A2 / ICOM Next** | OBD-II / under-hood diag connector | Official BMW dealer interface — required for ISTA/P, advanced programming, and most G-series newer-than-2020 programming sessions. |
+| **OBDLink MX+ / Veepeak / Vgate vLinker** | OBD-II ↔ Bluetooth/WiFi | Companion adapters for the mobile apps (Bimmercode, BimmerLink, Carly, ProTool, MHD, bm3, xHP). |
