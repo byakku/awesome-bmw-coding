@@ -115,7 +115,7 @@ You do not always need a laptop and a dealer-style cable. A small adapter in the
 
 One adapter can work with several apps. For example, the MHD Universal WiFi adapter works with MHD and also with coding apps such as Bimmercode and ProTool. Check the app vendor's list of supported adapters and cars before you buy.
 
-Cheap ELM327 clones are often too slow or unstable for coding. Use an adapter that the app vendor lists as supported.
+Cheap ELM327 clones are often too slow or unstable for coding, but are great cheap alternative for debugging.
 
 ### Which connection does my car use?
 
