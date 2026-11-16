@@ -108,7 +108,14 @@ F-series cars also still support D-CAN on the OBD-II port. Some tools and mobile
 
 #### Bluetooth and Wi-Fi adapters
 
-Mobile apps such as Bimmercode, BimmerLink, Carly and ProTool connect through a small adapter in the OBD-II port. Many apps support only some adapters. Cheap ELM327 clones are often too slow or unstable for coding. Use an adapter that the app vendor lists as supported.
+You do not always need a laptop and a dealer-style cable. A small adapter in the OBD-II port, used with a BMW app on a phone, can do BMW-specific diagnostics and coding. The adapter only provides the connection. The app decides what you can do.
+
+- **Adapters** connect to the phone over Bluetooth or Wi-Fi, for example the MHD Universal WiFi adapter, OBDLink MX+ or Veepeak.
+- **Apps** do the work, for example Bimmercode and ProTool for coding, BimmerLink for diagnostics and MHD for tuning.
+
+One adapter can work with several apps. For example, the MHD Universal WiFi adapter works with MHD and also with coding apps such as Bimmercode and ProTool. Check the app vendor's list of supported adapters and cars before you buy.
+
+Cheap ELM327 clones are often too slow or unstable for coding. Use an adapter that the app vendor lists as supported.
 
 ### Which connection does my car use?
 
@@ -121,11 +128,19 @@ Dates vary by model and market. Check the connector on your car before you buy a
 | E-series built from about March 2007 | 16-pin OBD-II | D-CAN | K+DCAN cable |
 | F-, G- and I-series (from 2008) | 16-pin OBD-II | ENET, and D-CAN | ENET cable. ICOM Next for dealer-level work. Bluetooth or Wi-Fi adapter for mobile apps. |
 
-### Generic OBD-II scanner or BMW tool?
+### Code reader, phone app or PC tool?
 
-A generic OBD-II scanner is enough to find out why the check engine light is on. It cannot see faults in other modules, for example the airbag, ABS or lights module. It cannot code. BMW modules also store their own fault codes, which are different from the generic P-codes.
+The software matters more than the plug. The same OBD-II port gives very different results depending on what you connect and which program you use.
 
-For anything beyond engine faults, use a BMW-specific tool. See [ECU coding software](#ecu-coding-software).
+| Setup | Example | Diagnostics | Coding |
+| --- | --- | --- | --- |
+| **Generic OBD-II code reader** | Any handheld OBD-II scanner | Engine and emissions faults only (generic P-codes) | No |
+| **OBD adapter with a BMW app** | MHD Universal WiFi adapter, OBDLink MX+ or Veepeak with Bimmercode, BimmerLink or ProTool | All modules, with BMW fault codes | Yes. The apps offer ready-made coding options. Bimmercode Expert mode and ProTool also give access to raw parameters. |
+| **Cable with PC software** | K+DCAN with INPA and NCS Expert, ENET with E-Sys, ICOM with ISTA+ | All modules, with BMW fault codes | Yes, full coding and programming |
+
+A generic OBD-II code reader is enough to find out why the check engine light is on. It cannot see faults in other modules, for example the airbag, ABS or lights module. It cannot code. BMW modules also store their own fault codes, which are different from the generic P-codes.
+
+For most common coding changes, an OBD adapter with a BMW app is enough. Use PC software for complex retrofits and for module software updates. See [ECU coding software](#ecu-coding-software).
 
 ### Before you code or program
 
@@ -315,4 +330,5 @@ These cables and interfaces are commonly used with the software above.
 | **K+DCAN cable** (USB) | OBD-II to USB | E-series Standard Tools (INPA, NCS Expert, WinKFP). Cheap. Many clones exist. |
 | **ENET cable** (Ethernet) | OBD-II to RJ45/USB | F/G/I-series E-Sys and ISTA. Carries Ethernet over pins of the OBD-II connector. |
 | **ICOM A2 / ICOM Next** | OBD-II or the diagnostic connector under the hood | Official BMW dealer interface. Required for ISTA/P, advanced programming and most programming sessions on G-series cars built after 2020. |
+| **MHD Universal WiFi adapter** | OBD-II to Wi-Fi | Made for MHD, but it also works with coding apps such as Bimmercode and ProTool. One adapter can cover tuning, diagnostics and coding. |
 | **OBDLink MX+ / Veepeak / Vgate vLinker** | OBD-II to Bluetooth/Wi-Fi | Adapters for the mobile apps (Bimmercode, BimmerLink, Carly, ProTool, MHD, bootmod3, xHP). |
